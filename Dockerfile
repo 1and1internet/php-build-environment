@@ -5,6 +5,7 @@ USER root
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+      php8.2-amqp \
       php8.2-bcmath \
       php8.2-bz2 \
       php8.2-cli \
@@ -20,8 +21,10 @@ RUN apt-get update \
       php8.2-opcache \
       php8.2-pgsql \
       php8.2-readline \
+      php8.2-redis \
       php8.2-sqlite3 \
       php8.2-xml \
+      php8.2-xmlrpc \
       php8.2-xsl \
       php8.2-zip \
     && apt-get autoremove --purge -y \
