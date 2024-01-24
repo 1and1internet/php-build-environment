@@ -1,31 +1,39 @@
-FROM ubuntu:22.04
+FROM 1and1internet/php-build-environment:base
+MAINTAINER developmentteamserenity@fasthosts.com
 
-LABEL org.opencontainers.image.authors="developmentteamserenity@fasthosts.com"
-
-ENV DEBIAN_FRONTEND noninteractive
+USER root
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-      gpg-agent \
-      curl \
-      git \
-      jq \
-      mysql-client \
-      nano \
-      software-properties-common \
-      tzdata \
-      unzip \
-      vim \
-      telnet \
-    && apt-get autoremove --purge -y \
-    && add-apt-repository -y ppa:ondrej/php \
-    && apt-get purge -y \
-      software-properties-common \
-      gpg-agent \
+      php8.3-amqp \
+      php8.3-bcmath \
+      php8.3-bz2 \
+      php8.3-cli \
+      php8.3-curl \
+      php8.3-gd \
+      php8.3-gmp \
+      php8.3-imap \
+      php8.3-intl \
+      php8.3-ldap \
+      php8.3-mbstring \
+      php8.3-mysql \
+      php8.3-odbc \
+      php8.3-opcache \
+      php8.3-pgsql \
+      php8.3-readline \
+      php8.3-redis \
+      php8.3-sqlite3 \
+      php8.3-xml \
+      php8.3-xmlrpc \
+      php8.3-xsl \
+      php8.3-zip \
     && apt-get autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app/
-RUN chown 1000:1000 /app /tmp
 USER 1000
-ENV HOME /tmp
+
+COPY --chown=1000:1000 --from=composer:2.4 /usr/bin/composer /usr/bin/composer
+
+ENV PATH $PATH:/tmp/.composer/vendor/bin
+
+RUN composer global require psy/psysh && composer clear-cache
