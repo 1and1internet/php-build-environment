@@ -1,6 +1,6 @@
 # PHP 8.3 Build Environment with XDebug
 
-This image contains a light image based on ubuntu 22.04 LTS and includes the latest PHP 8.3 CLI binaries from the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA. It is built on top of [1and1internet/php-build-environment-base](https://cloud.docker.com/u/1and1internet/repository/docker/1and1internet/php-build-environment-base).
+This image contains a light image based on ubuntu 24.04 LTS and includes the latest PHP 8.3 CLI binaries from the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA. It is built on top of [1and1internet/php-build-environment:base](https://hub.docker.com/r/1and1internet/php-build-environment).
 
 It has the following extensions installed:
 
