@@ -5,28 +5,28 @@ USER root
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-      php8.3-amqp \
-      php8.3-bcmath \
-      php8.3-bz2 \
-      php8.3-cli \
-      php8.3-curl \
-      php8.3-gd \
-      php8.3-gmp \
-      php8.3-imap \
-      php8.3-intl \
-      php8.3-ldap \
-      php8.3-mbstring \
-      php8.3-mysql \
-      php8.3-odbc \
-      php8.3-opcache \
-      php8.3-pgsql \
-      php8.3-readline \
-      php8.3-redis \
-      php8.3-sqlite3 \
-      php8.3-xml \
-      php8.3-xmlrpc \
-      php8.3-xsl \
-      php8.3-zip \
+      php8.4-amqp \
+      php8.4-bcmath \
+      php8.4-bz2 \
+      php8.4-cli \
+      php8.4-curl \
+      php8.4-gd \
+      php8.4-gmp \
+      php8.4-imap \
+      php8.4-intl \
+      php8.4-ldap \
+      php8.4-mbstring \
+      php8.4-mysql \
+      php8.4-odbc \
+      php8.4-opcache \
+      php8.4-pgsql \
+      php8.4-readline \
+      php8.4-redis \
+      php8.4-sqlite3 \
+      php8.4-xml \
+      php8.4-xmlrpc \
+      php8.4-xsl \
+      php8.4-zip \
     && apt-get autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 

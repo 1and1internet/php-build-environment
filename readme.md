@@ -1,6 +1,30 @@
-# PHP Build Environment Base
+# PHP 8.4 Build Environment
 
-This image contains a light image based on ubuntu 22.04 LTS. It also has the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA added to allow installation of the latest versions of PHP 7.x
+This image contains a light image based on ubuntu 22.04 LTS and includes the latest PHP 8.4 CLI binaries from the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA. It is built on top of [1and1internet/php-build-environment-base](https://cloud.docker.com/u/1and1internet/repository/docker/1and1internet/php-build-environment-base).
+
+It has the following extensions installed:
+
+1. AMQP
+1. BCMath
+1. Bz2
+1. Curl
+1. GD
+1. GMP
+1. IMAP
+1. Internationalisation
+1. LDAP
+1. MBString
+1. MySQL (both PDO and mysqli)
+1. ODBC
+1. Opcache
+1. Postgresql
+1. Readline
+1. Redis
+1. Sqlite 3
+1. XML
+1. XML-RPC
+1. XSL
+1. Zip
 
 It also includes common tools used to build and run PHP applications:
 
@@ -16,4 +40,6 @@ It also includes a couple of text editors for convenience:
 1. Nano
 1. Vim
 
-The image is rebuilt nightly, as well as when the upstream images ([Ubuntu](https://hub.docker.com/_/ubuntu/) and [Composer](https://hub.docker.com/_/composer/)) push a new version. So this image should usually contain the latest fixes and updates.
+Lastly, it also has the latest stable release of [PsySH](https://psysh.org/) - a PHP REPL that's useful for debugging.
+
+The parent image is rebuilt nightly, and this image tracks changes in it. So this image should usually contain the latest fixes and updates.
