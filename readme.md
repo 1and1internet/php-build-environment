@@ -1,6 +1,6 @@
 # PHP Build Environment Base
 
-This image contains a light image based on ubuntu 22.04 LTS. It also has the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA added to allow installation of the latest versions of PHP 7.3+ (through to 8.3). 
+This image contains a light image based on ubuntu 24.04 LTS. It also has the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA added to allow installation of the latest versions of PHP 7.3+ (through to 8.5). 
 
 **Versions <=7.2 are no longer supported as of 15/11/2024.**
 
