@@ -1,11 +1,11 @@
-FROM 1and1internet/php-build-environment:8.3
+FROM 1and1internet/php-build-environment:8.5
 LABEL org.opencontainers.image.authors development@fasthosts.co.uk
 
 USER root
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-      php8.3-xdebug \
+      php8.5-xdebug \
     && apt-get autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 
