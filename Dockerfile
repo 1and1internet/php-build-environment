@@ -31,8 +31,10 @@ RUN apt-get update \
 
 USER 1000
 
-COPY --chown=1000:1000 --from=composer:2.4 /usr/bin/composer /usr/bin/composer
+COPY --chown=1000:1000 --from=composer:2.10 /usr/bin/composer /usr/bin/composer
 
 ENV PATH $PATH:/tmp/.composer/vendor/bin
+# Temporary: re-enable advisory blocking once its impact on app pipelines is assessed
+ENV COMPOSER_NO_SECURITY_BLOCKING=1
 
 RUN composer global require psy/psysh && composer clear-cache
